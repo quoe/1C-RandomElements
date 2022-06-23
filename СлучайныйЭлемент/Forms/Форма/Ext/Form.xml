@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="СоздатьСлучайный" id="17">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.СоздатьСлучайный</CommandName>
+				<ExtendedTooltip name="СоздатьСлучайныйРасширеннаяПодсказка" id="18"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПараметрыСоздания" id="74">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры создания</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа параметры создания</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаПараметрыСозданияРасширеннаяПодсказка" id="75"/>
+			<ChildItems>
+				<InputField name="КоличествоСоздаваемых" id="41">
+					<DataPath>КоличествоСоздаваемых</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество создаваемых элементов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="КоличествоСоздаваемыхКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="КоличествоСоздаваемыхРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="ПрефиксНазвания" id="76">
+					<DataPath>ПрефиксНазвания</DataPath>
+					<ContextMenu name="ПрефиксНазванияКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="ПрефиксНазванияРасширеннаяПодсказка" id="78"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="ПропускатьОшибки" id="38">
+			<DataPath>ПропускатьОшибки</DataPath>
+			<CheckBoxType>Switcher</CheckBoxType>
+			<ContextMenu name="ПропускатьОшибкиКонтекстноеМеню" id="39"/>
+			<ExtendedTooltip name="ПропускатьОшибкиРасширеннаяПодсказка" id="40"/>
+		</CheckBoxField>
+		<Table name="ТаблицаВидыОбъектов" id="44">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ТаблицаВидыОбъектов</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаВидыОбъектовКонтекстноеМеню" id="45"/>
+			<AutoCommandBar name="ТаблицаВидыОбъектовКоманднаяПанель" id="46">
+				<ChildItems>
+					<ButtonGroup name="ТаблицаГруппаФлаги" id="66">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Таблица группа флаги</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Таблица группа флаги</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="ТаблицаГруппаФлагиРасширеннаяПодсказка" id="67"/>
+						<ChildItems>
+							<Button name="ТаблицаТаблицаУстановитьФлаги" id="68">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ТаблицаУстановитьФлаги</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.CheckAll</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="ТаблицаТаблицаУстановитьФлагиРасширеннаяПодсказка" id="69"/>
+							</Button>
+							<Button name="ТаблицаИнвертироватьФлаги" id="70">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ТаблицаИнвертироватьФлаги</CommandName>
+								<ExtendedTooltip name="ТаблицаИнвертироватьФлагиРасширеннаяПодсказка" id="71"/>
+							</Button>
+							<Button name="ТаблицаТаблицаСнятьФлаги" id="72">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ТаблицаСнятьФлаги</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="ТаблицаТаблицаСнятьФлагиРасширеннаяПодсказка" id="73"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаВидыОбъектовРасширеннаяПодсказка" id="47"/>
+			<SearchStringAddition name="ТаблицаВидыОбъектовСтрокаПоиска" id="48">
+				<AdditionSource>
+					<Item>ТаблицаВидыОбъектов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаВидыОбъектовСтрокаПоискаКонтекстноеМеню" id="49"/>
+				<ExtendedTooltip name="ТаблицаВидыОбъектовСтрокаПоискаРасширеннаяПодсказка" id="50"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаВидыОбъектовСостояниеПросмотра" id="51">
+				<AdditionSource>
+					<Item>ТаблицаВидыОбъектов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаВидыОбъектовСостояниеПросмотраКонтекстноеМеню" id="52"/>
+				<ExtendedTooltip name="ТаблицаВидыОбъектовСостояниеПросмотраРасширеннаяПодсказка" id="53"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаВидыОбъектовУправлениеПоиском" id="54">
+				<AdditionSource>
+					<Item>ТаблицаВидыОбъектов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаВидыОбъектовУправлениеПоискомКонтекстноеМеню" id="55"/>
+				<ExtendedTooltip name="ТаблицаВидыОбъектовУправлениеПоискомРасширеннаяПодсказка" id="56"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="ТаблицаВидыОбъектовПометка" id="57">
+					<DataPath>ТаблицаВидыОбъектов.Пометка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТаблицаВидыОбъектовПометкаКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="ТаблицаВидыОбъектовПометкаРасширеннаяПодсказка" id="59"/>
+				</CheckBoxField>
+				<InputField name="ТаблицаВидыОбъектовЗначение" id="60">
+					<DataPath>ТаблицаВидыОбъектов.Значение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаВидыОбъектовЗначениеКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="ТаблицаВидыОбъектовЗначениеРасширеннаяПодсказка" id="62"/>
+				</InputField>
+				<InputField name="ТаблицаВидыОбъектовКлассМетаданных" id="63">
+					<DataPath>ТаблицаВидыОбъектов.КлассМетаданных</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаВидыОбъектовКлассМетаданныхКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="ТаблицаВидыОбъектовКлассМетаданныхРасширеннаяПодсказка" id="65"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.СлучайныйЭлемент</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПропускатьОшибки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пропускать ошибки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоСоздаваемых" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество создаваемых</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаВидыОбъектов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица виды объектов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Пометка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КлассМетаданных" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Класс метаданных</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПрефиксНазвания" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Префикс названия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьСлучайный" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать случайный</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать случайный</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьСлучайный</Action>
+		</Command>
+		<Command name="ТаблицаИнвертироватьФлаги" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инвертировать флаги</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инвертировать флаги</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SwitchActivity</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ТаблицаИнвертироватьФлаги</Action>
+		</Command>
+		<Command name="ТаблицаСнятьФлаги" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флаги</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флаги</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТаблицаСнятьФлаги</Action>
+		</Command>
+		<Command name="ТаблицаУстановитьФлаги" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флаги</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флаги</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТаблицаУстановитьФлаги</Action>
+		</Command>
+	</Commands>
+</Form>
